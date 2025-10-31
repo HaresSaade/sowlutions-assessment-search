@@ -1,0 +1,9 @@
+<div>
+    <input type="text" [(ngModel)] ="searchTerm" placeholder="keywords" />
+</div>
+<div *ngIf="filteredText.length > 0">
+    <div *ngFor="let item of texts">
+        <h3 [innerHTML]="highlight(item.title)"></h3>
+        <p [innerHTML]="highlight(item.body)"></p>
+    </div>
+</div>
